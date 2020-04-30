@@ -2,9 +2,10 @@
 $is_https = isset($_SERVER['HTTPS']) &&
     ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1);
 
-if (!$is_https) {
+// CHANGE
+if ($is_https) {
   http_response_code(400);
-  die('do_login.php must be over https');
+  die('do_login.php must be over http');
 }
 
 session_start();

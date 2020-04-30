@@ -2,9 +2,10 @@
 $is_https = isset($_SERVER['HTTPS']) &&
     ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1);
 
-if (!$is_https) {
+// CHANGE
+if ($is_https) {
   http_response_code(400);
-  die('login page must be over https');
+  die('login page must NOT be over https');
 }
 
 session_start();
@@ -21,9 +22,9 @@ session_start();
   Log into Your Bank&trade;
 </h1>
 
-<h2 style="color: red">1: HTTPS -> HTTPS</h2>
+<h2 style="color: red">2: HTTP -> HTTPS</h2>
 
-<form action="https://bank.local/do_login.php" method="POST">
+<form action="https://bank.local/do_login2.php" method="POST">
   <fieldset>
     <legend>Login</legend>
     <label>

