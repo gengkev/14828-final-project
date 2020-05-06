@@ -65,5 +65,13 @@ if (isset($_SESSION['username'])) {
 <a href="https://bank.local/login7.php">Login page 7 (autocomplete off)</a>
 </p>
 
+
+<p>
+Clickjacking page:
+</p>
+<p>
+<a href="http://bank.local/login3_2.php">Login page 3 (with LastPass clickjack)</a>
+</p>
+
 </body>
 </html>
