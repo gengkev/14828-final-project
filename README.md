@@ -1,16 +1,21 @@
+The server can be run using Docker Compose as follows:
+```
+sudo docker-compose up -d
+```
 
-https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+Furthermore, it relies on the bank.local and evil.local domains resolving
+to localhost. This can be accomplished by adding to the hosts file:
+
+```
+127.0.0.1 evil.local
+127.0.0.1 bank.local
+```
+
+In order for your browser to trust the HTTPS sites for evil.local and
+bank.local, you need to get Chrome to trust the root authority in `rootCA.pem` (instructions vary by operating system, but search for "Manage
+certificates" in the Chrome settings, and check under "More").
+
+The authority and certificate was generated following instructions from
+the website:
+
 https://www.freecodecamp.org/news/how-to-get-https-working-on-your-local-development-environment-in-5-minutes-7af615770eec/
-
-* skip changing firewall settings
-* install CA certificate into Chrome directly, not into the OS
-* also install PHP support for nginx
-
-```
-sudo rsync -arv sites-available/ /etc/nginx/sites-available/
-sudo rsync -arv www/ /var/www/
-sudo ln -s /etc/nginx/sites-available/bank.local /etc/nginx/sites-enabled/
-sudo ln -s /etc/nginx/sites-available/evil.local /etc/nginx/sites-enabled/
-sudo nginx -t
-# ... restart nginx
-```
