@@ -1,3 +1,11 @@
+# Evaluating the Security of Password Manager Extensions
+
+This project was submitted as a final project for the 14-828 Browser Security class. Read [our final paper](Browser_Security_Final_Paper.pdf).
+
+# Source code
+
+The source code in this repository consists of testing files used to help obtain some of our results.
+
 The server can be run using Docker Compose as follows:
 ```
 sudo docker-compose up -d
